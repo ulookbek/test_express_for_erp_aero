@@ -1,0 +1,37 @@
+{
+    "name": "test-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index",
+    "type": "module",
+    "scripts": {
+        "start": "node --es-module-specifier-resolution=node index.js",
+        "dev": "nodemon --es-module-specifier-resolution=node index.js",
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write .",
+        "lint:check": "eslint .",
+        "lint:fix": "eslint --fix ."
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.1.0",
+        "body-parser": "^1.20.1",
+        "dotenv": "^16.0.3",
+        "eslint-config-prettier": "^8.5.0",
+        "express": "^4.18.2",
+        "express-validator": "^6.14.2",
+        "file-extension": "^4.0.5",
+        "file-type": "^18.0.0",
+        "jsonwebtoken": "^8.5.1",
+        "multer": "^1.4.5-lts.1",
+        "mysql2": "^2.3.3",
+        "sequelize": "^6.25.3",
+        "uuid": "^9.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.28.0",
+        "nodemon": "^2.0.20",
+        "prettier": "2.8.0"
+    }
+}
