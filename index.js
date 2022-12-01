@@ -5,13 +5,16 @@ dotenv.config()
 import bodyParser from 'body-parser'
 import router from './src/app.controller.js'
 import errorMiddleware from './middlewares/error.js'
-
+import cors from "cors"
 import sequelize from './db'
 
 const app = express()
+
 app.use(bodyParser.json())
+app.use(cors({origin: '*'}));
 app.use('/api', router)
 app.use(errorMiddleware)
+
 ;(async function runApp() {
     try {
         await sequelize.authenticate()
